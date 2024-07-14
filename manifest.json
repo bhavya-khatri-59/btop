@@ -1,0 +1,31 @@
+{
+	"manifest_version": 2,
+	"name": "BTOP",
+	"version": "1.0",
+	"description": "Makes VTOP website bearable to use.",
+	"permissions": ["activeTab", "tabs", "storage", "downloads", "https://vtop.vit.ac.in/*"],
+	"browser_specific_settings": {
+	  "gecko": {
+		"id": "btop@attheratedotcom.com"
+	  }
+	},
+	"content_scripts": [
+	  {
+		"matches": ["https://vtop.vit.ac.in/*"],
+		"js": ["notes.js", "dark_mode.js"]
+	  }
+	],
+	"background": {
+	  "scripts": ["background.js"],
+	  "persistent": true
+	},
+	"browser_action": {
+	  "default_icon": {
+		"48": "icons/btop.png"
+	  }
+	},
+	"icons": {
+	  "48": "icons/btop.png"
+	}
+  }
+  
