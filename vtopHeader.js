@@ -1,6 +1,6 @@
 console.log("vtopHeader.js is running");
-let intervalId;
-let injected = false;
+let interval;
+let inject = false;
 
 let code = `
     <span class="navbar-text px-0 px-sm-2 mx-0 mx-sm-1 text-light"></span>
@@ -11,18 +11,27 @@ let code = `
 `
 
 function shortcut() {
-    let target = document.getElementById('vtopHeaderBarControl');
-    if(target && !injected) {
+    let t = document.getElementById('vtopHeaderBarControl');
+    if(t && !inject) {
         console.log("true");
-        target.innerHTML = code + target.innerHTML;
-        injected = true;
+        t.innerHTML = code + t.innerHTML;
+        inject = true;
     }
-    else if (!target && injected){
+    else if (!t && inject){
         console.log("false");
-        injected = false;
+        inject = false;
+    }
+    images = document.getElementsByTagName('img')
+    if(images[0].src == "https://vtop.vit.ac.in/vtop/assets/img/VITLogoEmblem.png"){
+    images[0].src = browser.runtime.getURL('icons/btop.png')
+    }
+    for(i = 1; i < images.length; i++) {
+    if(images[i].src === "https://vtop.vit.ac.in/vtop/users/image/?id=23BAI0137") {
+        images[i].src = browser.runtime.getURL('images/pfp.png')
+    }
     }
 }
 
 shortcut();
 
-intervalId(shortcut, 1000);
+interval = setInterval(shortcut, 1000);

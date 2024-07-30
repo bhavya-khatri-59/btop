@@ -106,13 +106,5 @@ styleElement.textContent = styles;
 // Inject the <style> element into the <head> of the document
 document.head.appendChild(styleElement);
 
-images = document.getElementsByTagName('img')
-if(images[0].src == "https://vtop.vit.ac.in/vtop/assets/img/VITLogoEmblem.png"){
-  images[0].src = browser.runtime.getURL('icons/btop.png')
-}
-for(i = 1; i < images.length; i++) {
-  if(images[i].src === "https://vtop.vit.ac.in/vtop/users/image/?id=23BAI0137") {
-    images[i].src = browser.runtime.getURL('images/pfp.png')
-  }
-}
+
 

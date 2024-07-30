@@ -1,5 +1,5 @@
 
-console.log("notes.js loaded!");
+console.log("notes.js is running");
 
 let intervalId; // Variable to hold the interval ID
 let injected = false; // Flag to track if the button has been injected
