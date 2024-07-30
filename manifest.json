@@ -11,8 +11,8 @@
 	},
 	"content_scripts": [
 	  {
-		"matches": ["https://vtop.vit.ac.in/*"],
-		"js": ["notes.js", "dark_mode.js"]
+		"matches": ["https://vtop.vit.ac.in/*","https://vtopreg.vit.ac.in/*", "https://codespindle.com/*","https://moovit.vit.ac.in/*"],
+		"js": ["notes.js", "dark_mode.js","vtopHeader.js"]
 	  }
 	],
 	"background": {

@@ -39,9 +39,11 @@ figure:empty {
 }
 
 img,
-image {
-    filter: invert(100%) !important;
-    -webkit-filter: invert(100%) !important;
+image,
+em,
+embed {
+    filter: invert(100%) hue-rotate(270deg) !important;
+    -webkit-filter: invert(100%) hue-rotate(270deg) !important;
 }
 
 form em,
@@ -105,12 +107,12 @@ styleElement.textContent = styles;
 document.head.appendChild(styleElement);
 
 images = document.getElementsByTagName('img')
-images[0].src = browser.runtime.getURL('icons/btop.png')
+if(images[0].src == "https://vtop.vit.ac.in/vtop/assets/img/VITLogoEmblem.png"){
+  images[0].src = browser.runtime.getURL('icons/btop.png')
+}
 for(i = 1; i < images.length; i++) {
   if(images[i].src === "https://vtop.vit.ac.in/vtop/users/image/?id=23BAI0137") {
-    images[i].src = browser.runtime.getURL('images/pfp2.png')
+    images[i].src = browser.runtime.getURL('images/pfp.png')
   }
 }
-
-
 
