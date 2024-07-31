@@ -12,8 +12,8 @@ let code = `
 
 function shortcut() {
     let t = document.getElementById('vtopHeaderBarControl');
-    if(t && !inject) {
-        console.log("true");
+    if(t && !((t.innerHTML).startsWith(code))) {
+        console.log("true");    
         t.innerHTML = code + t.innerHTML;
         inject = true;
     }

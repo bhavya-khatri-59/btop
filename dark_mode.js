@@ -41,7 +41,8 @@ figure:empty {
 img,
 image,
 em,
-embed {
+embed,
+.img-rounded {
     filter: invert(100%) hue-rotate(270deg) !important;
     -webkit-filter: invert(100%) hue-rotate(270deg) !important;
 }
@@ -71,8 +72,8 @@ input[type='checkbox'],
 [style*='background:url']:not(html):not(body):not(input),
 [style*='background: url']:not(html):not(body):not(input),
 [style*='background-image']:not(html):not(body):not(input) {
-  filter: invert(100%) !important;
-  -webkit-filter: invert(100%) !important;
+  filter: invert(100%) hue-rotate(270deg) !important;
+  -webkit-filter: invert(100%) hue-rotate(270deg) !important;
 }
 
 :-webkit-full-screen img,
