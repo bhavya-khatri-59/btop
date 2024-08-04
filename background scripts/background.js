@@ -1,4 +1,4 @@
-let course = "";
+/*let course = "";
 let faculty_slot = "";
 let file_name = {};
 let time_last = new Date();
@@ -60,4 +60,4 @@ browser.downloads.onDeterminingFilename.addListener((item, suggest) => {
       });
     }
   }
-});
+});*/

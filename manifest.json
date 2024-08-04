@@ -12,11 +12,11 @@
 	"content_scripts": [
 	  {
 		"matches": ["https://vtop.vit.ac.in/*","https://vtopreg.vit.ac.in/*", "https://codespindle.com/*","https://moovit.vit.ac.in/*"],
-		"js": ["notes.js", "dark_mode.js","vtopHeader.js"]
+		"js": ["content scripts/notes.js", "content scripts/dark_mode.js","content scripts/vtopHeader.js","content scripts/captcha.js"]
 	  }
 	],
 	"background": {
-	  "scripts": ["background.js"],
+	  "scripts": ["background scripts/background.js", "background scripts/background2.js"],
 	  "persistent": true
 	},
 	"browser_action": {

@@ -13,12 +13,12 @@ let code = `
 function shortcut() {
     let t = document.getElementById('vtopHeaderBarControl');
     if(t && !((t.innerHTML).startsWith(code))) {
-        console.log("true");    
+        //console.log("true");    
         t.innerHTML = code + t.innerHTML;
         inject = true;
     }
     else if (!t && inject){
-        console.log("false");
+        //console.log("false");
         inject = false;
     }
     images = document.getElementsByTagName('img')
